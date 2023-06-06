@@ -1,3 +1,74 @@
-h1 {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+:root {
+  --primary-color: #151e3d;
+  --light-color: #eee;
+  --hover-color: #f6c423;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+.menu {
+  background-color: var(--light-color);
+  text-align: center;
+}
+.menu ul {
+  display: inline-flex;
+  font-size: 15px;
+}
+.menu ul li {
+  margin: 10px;
+  padding: 10px;
+  width: 100px;
+}
+.menu ul li a {
+  color: #000;
+  font-size: 20px;
+}
+.active {
+  background-color: var(--hover-color);
+  border-radius: 3px;
+}
+.active,
+.menu ul li:hover {
+  background-color: var(--hover-color);
+  border-radius: 3px;
+}
+.sbm1 {
+  display: none;
+}
+.menu ul li:hover .sbm1 {
+  position: absolute;
+  display: block;
+  margin-top: 10px;
+  margin-left: -15px;
+  background-color: var(--light-color);
+}
+.menu ul li:hover .sbm1 ul {
+  display: block;
+  margin: 15px;
+}
+.menu ul li:hover .sbm1 ul li {
+  border-bottom: 1px solid grey;
+  background: transparent;
+  width: 120px;
+  padding: 15px;
+  text-align: left;
+}
+.menu ul li:hover .sbm1 ul li:last-child {
+  border: none;
+}
+.sbm1 ul li a {
+  font-size: 16px;
+}
+.menu ul li:hover .sbm1 ul li a:hover {
+  color: #c29200;
 }
